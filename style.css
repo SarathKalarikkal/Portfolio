@@ -781,20 +781,22 @@ color: var(--dim-color);
     #about .aboutSection .leftPhoto img {
         width: 318px;
     }
-    #about .aboutSection .rightContent p{
-        font-size: 15px;
+     #about .aboutSection .rightContent p{
+        font-size: 12.5px;
     }
     .tablink{
-        font-size: 0.85rem;
+        font-size: 11px;
+        padding: 2px 8px;
     }
     #about h5{
         text-align: left;
     }
     .tab-content {
         text-align: left;
+        height: 100%;
     }
     .tab-content h3, strong,li{
-        font-size: 15px;
+        font-size: 12px;
     }
 
 
