@@ -167,5 +167,124 @@ function openTab(event) {
     });
 }
 
+
+
+
+// ------------------Chatbot-----------------
+
+const robot = document.querySelector('.fa-robot');
+const chatCloseBtn = document.querySelector('.chatClose');
+const chatBox = document.querySelector('.chatRobot');
+
+const sectionsToBlur = [
+    document.getElementById('home'),
+    document.getElementById('about'),
+    document.getElementById('projects'),
+    document.getElementById('skills'),
+    document.getElementById('contact'),
+    document.getElementById('footer')
+];
+
+function applyBlur() {
+    sectionsToBlur.forEach(section => {
+        section.style.filter = 'blur(15px)';
+    });
+}
+
+function removeBlur() {
+    sectionsToBlur.forEach(section => {
+        section.style.filter = 'blur(0)';
+    });
+}
+
+function chatBoxAppear() {
+    chatBox.classList.add('activeChat');
+    applyBlur();
+}
+
+function chatBoxDisappear() {
+    chatBox.classList.remove('activeChat');
+    removeBlur();
+}
+
+robot.addEventListener('click', chatBoxAppear);
+chatCloseBtn.addEventListener('click', chatBoxDisappear);
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+const chatBody = document.getElementById("chat-body");
+const chatOptions = document.getElementById("chat-options");
+
+const questions = [
+{ id: 1, text: "Tell me about yourself" },
+{ id: 2, text: "What are your skills?" },
+{ id: 3, text: "Give sample of your poject?" },
+{ id: 4, text: "How you learn this skills?" },
+// Add more questions here
+];
+
+questions.forEach((question) => {
+const button = document.createElement("button");
+button.className = "button";
+button.textContent = question.text;
+button.addEventListener("click", () => handleQuestionClick(question));
+chatOptions.appendChild(button);
+});
+
+function handleQuestionClick(question) {
+addMessage("user-message", question.text);
+addThinkingAnimation();
+
+// Simulate a delayed response
+setTimeout(() => {
+    const answer = getAnswer(question.id);
+    addMessage("bot-message", answer);
+    removeThinkingAnimation();
+}, 1500);
+}
+
+function addMessage(who, message) {
+const messageDiv = document.createElement("div");
+messageDiv.className = `message ${who}`;
+messageDiv.textContent = message;
+chatBody.appendChild(messageDiv);
+chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function addThinkingAnimation() {
+chatBody.classList.add("thinking-animation");
+}
+
+function removeThinkingAnimation() {
+chatBody.classList.remove("thinking-animation");
+}
+
+function getAnswer(questionId) {
+// You can define your answers based on the selected question here
+switch (questionId) {
+    case 1:
+        return "I am a web developer with a passion for creating user-friendly websites.";
+    case 2:
+        return "I have expertise in HTML, CSS, JavaScript, and also in CSS and javascript frameworks.";
+    case 3:
+        return "You can check out my projects on my GitHub account through this link: https://github.com/SarathKalarikkal";
+    case 4:
+        return "I acquired these skills through various online platforms and by attending code camps to enhance my abilities.";
+    // Add more answers for other questions here
+    default:
+        return "I'm sorry, I don't understand that question.";
+}
+}
+});
+
+
+
+
+
+
+
+
+
 // Axios Scrolling effect on every section
 AOS.init();

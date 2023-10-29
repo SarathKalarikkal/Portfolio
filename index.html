@@ -13,7 +13,7 @@
   <body>
 <!-- ----navbar----- -->
 
-    <div class="navbar" data-aos="fade-down" data-aos-duration="1000">
+    <div id="navbar" class="navbar" data-aos="fade-down" data-aos-duration="1000">
         <div class="logo">
             <a href="#"><h3>SARATH</h3></a>
         </div>
@@ -26,6 +26,22 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
              </ul>
+        </div>
+        <i class="fa-solid fa-robot"></i>
+        <div class="chatRobot">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h1>My Chatbot</h1>
+                    <i class="fa-solid fa-xmark chatClose"></i>
+                </div>
+                <div class="chat-body" id="chat-body">
+                    <div class="message bot-message">Hi, my name is Sarath. 😊 I can help you by asking the questions shown below.</div>
+                    <!-- Chat messages will be displayed here -->
+                </div>
+                <div class="chat-options" id="chat-options">
+                    <!-- Chat options will be displayed here as buttons -->
+                </div>
+            </div>
         </div>
     </div>
 
@@ -400,7 +416,14 @@
        </div>
     </section>
 
+    <!-------ChatBot------->
+
+   
+
     
+
+
+
     <script src="script.js"></script>
     
   </body>
