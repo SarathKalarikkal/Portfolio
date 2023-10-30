@@ -243,7 +243,7 @@ function getAnswer(questionId) {
 // You can define your answers based on the selected question here
 switch (questionId) {
     case 1:
-        return "I am a web developer with a passion for creating user-friendly websites.";
+        return "I am a web developer with a passion for creating user-friendly websites. With a background in Information Technology, I have also worked as a designer, specializing in both graphic and web design. My experience in design, combined with my expertise in web development, allows me to craft visually appealing and user-centric websites that seamlessly blend form and function.";
     case 2:
         return "I have expertise in HTML, CSS, JavaScript, and also in CSS and javascript frameworks.";
     case 3:
