@@ -32,7 +32,11 @@ li{
     border-radius: 2px;
   }
 
-
+.container{
+    max-width: 1320px;
+    width: 100%;
+    padding: 20px;
+}
 /* --------------------Navigation Bar section----------- */
 .navbar{
     background-color: var(--section-color);
@@ -224,7 +228,7 @@ i.menuIcon:hover{
     margin-top: 5px;
 }
 
-#about .aboutSection .rightContent a{
+#about .aboutSection .rightContent .aBtn{
     padding: 8px 15px;
     width: 130px;
     color: var(--brand-color);
@@ -278,7 +282,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
     height: 200px;
     width: 100%;
 }
-.Graduation, .Credentials{
+.Graduation,.postG{
     margin-top: 20px;
 }
 :is(.postG, .Graduation, .Credentials) h3 {
@@ -291,8 +295,15 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
 .tab-section .heading strong{
     color: var(--brand-color);
 }
-
-
+#dowloadCvBtn, .exploreMore{
+    padding: 8px 15px;
+    color: var(--brand-color);
+    border: 1px solid var(--brand-color);
+    border-radius: 8px;
+}
+.explore{
+    margin-top: 50px;
+}
 
 /* --------------------Project Section-------------------- */
 
@@ -441,6 +452,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
 .spanTitle{
     width: 100%;
     display: inline-flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 .spanTitle span:nth-child(2){
@@ -482,27 +494,31 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
 
 .skill {
     margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.backend{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
 }
 .skill-label {
     font-weight: 500;
-    color:var(--dim-color);
+    color:var(--brand-color);
 }
-.progress {
-    height: 10px;
-    background-color: var(--dim-color);
-    border-radius: 5px;
-    margin-top: 5px;
+.skillName li{
+    color: var(--dim-color);
 }
-.progress-bar {
-    height: 100%;
-    border-radius: 5px;
-    transition: width 1s ease-in-out;
-}
-
 .color {
     background-color: var(--brand-color);
 }
-
+.mernStackimage{
+    width:70%;
+    margin-left: -20px;
+}
 
 
 /* -----------Contact section---------- */
