@@ -8,8 +8,8 @@
 :root{
     --brand-color : #1480fc;
     --hover-color : #3684f8;
-    --bg-color: #212529;
-    --section-color : #282c30;
+    --bg-color: #1f1f21;
+    --section-color : #2a2a2c;
     --dim-color : rgb(179, 179, 179);
     --section-padding:0 40px;
 }
@@ -35,7 +35,7 @@ li{
 .container{
     max-width: 1320px;
     width: 100%;
-    padding: 20px;
+    padding: 0 1rem;
 }
 /* --------------------Navigation Bar section----------- */
 .navbar{
@@ -94,6 +94,7 @@ i.menuIcon:hover{
     height: 700px;
     display: flex;
     padding-top: 80px;
+    background: var(--bg-color)
 }
 .hero .content{
     color: white;
@@ -135,19 +136,30 @@ i.menuIcon:hover{
    font-weight: 200;
     line-height: 20px;  
 }
-.hero .left-side .content a{
+ .aboutBtn{
     padding: 8px 15px;
     color: var(--brand-color);
     border: 1px solid var(--brand-color);
     border-radius: 8px;
 }
-.hero .left-side .content a:hover{
+.aboutBtn:hover{
    color: white;
    background-color: var(--brand-color);
    filter: drop-shadow(0px 0px 10px var(--brand-color));
 }
-
-
+.heroBtns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+}
+.socilLink-hero a{
+    color: var(--dim-color);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--section-color);
+    font-size: 12px;
+}
 /* -----Hero Right side---- */
 .hero .right-side{
     display: flex;
@@ -241,7 +253,7 @@ i.menuIcon:hover{
    filter: drop-shadow(0px 0px 10px var(--brand-color));
 }
 #about .aboutSection .leftPhoto img{
-    width: 400px;
+    width: 100%;
 }
 .tablink{
     padding: 5px 20px;
@@ -301,6 +313,10 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
     border: 1px solid var(--brand-color);
     border-radius: 8px;
 }
+.exploreMore:hover{
+    background-color: #1480fc;
+    color: white;
+}
 .explore{
     margin-top: 50px;
 }
@@ -351,7 +367,14 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
     height:100%;
 }
 
-
+.js-heading,.ui-heading{
+    color: white;
+    text-decoration: underline;
+    font-weight: 400;
+}
+.ui-heading{
+    margin-top: 4rem;
+}
 
 #projects .projectSection .box {
     width: 300px;
@@ -536,11 +559,11 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
     color: white;
     margin-bottom: 10px;
 }
-#contact p{
+.contactPara{
     font-size: 14px;
-    color: var(--dim-color);
     margin-bottom: 20px;
     text-align: center;
+    color: var(--dim-color);
 }
 #contact h1 span{
     color: var(--brand-color);
@@ -596,7 +619,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.425);
     filter: drop-shadow(0px 0px 10px var(--brand-color));
 }
 
-
+#my-form-status{
+    margin-top: 2rem;
+    font-weight: 400;
+    color: var(--dim-color);
+    text-align: center;
+}
 
 /* --------------------footer section----------- */
 
@@ -668,7 +696,9 @@ color: var( --brand-color);
 
 #footer .social .socilLink a i{
 color: var(--dim-color);
-
+}
+#footer .social .socilLink a i:hover{
+    color: white;
 }
 .credits{
     margin-top: 60px;
@@ -828,6 +858,10 @@ color: var(--dim-color);
 }
 
 @media(max-width:760px){
+    .heroBtns{
+        flex-direction: column;
+        gap: 2rem;
+    }
     .fa-robot{
         right: 95px;
         top: 29px;
@@ -1001,9 +1035,7 @@ color: var(--dim-color);
         align-items: center;
         padding: 0;
     }
-    #about .aboutSection .leftPhoto img {
-        width: 318px;
-    }
+    
     #about .aboutSection .rightContent p{
         font-size: 12.5px;
     }
@@ -1094,7 +1126,6 @@ color: var(--dim-color);
 }
 #contact p{
     font-size: 14px;
-    color: var(--dim-color);
     margin-bottom: 20px;
     text-align: center;
 }
@@ -1172,4 +1203,12 @@ color: var(--dim-color);
 }
 
 
+}
+
+@media (min-width : 763px) and (max-width:1251px){
+    #Profile{
+        overflow: scroll;
+    height: 180px;
+    display: block;
+    }
 }
